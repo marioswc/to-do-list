@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+:root {
+  --text: #333;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}

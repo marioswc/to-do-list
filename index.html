@@ -3,20 +3,61 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="/src/style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>To-Do List</title>
     <meta name="description" content="A simple to-do list application built with HTML, CSS, and JavaScript." />
   </head>
-  <body>
-    <section>
+  <body class="bg-(--bg-primary)">
+    <main class="md:max-w-300 max-w-md mx-auto">
       <div>
-        <p class="text-4xl font-bold">To-Do List</p>
+        <!-- title and informations -->
+        <div class="flex items-center justify-center gap-2 p-2">
+          <p class="text-2xl">🗓️</p>
+          <h1 class="text-2xl font-bold text-(--text)">To-Do List</h1>
+        </div>
+
+        <!-- create a new task -->
+         <div class="max-w-120 mx-auto mt-4 p-2">
+           <div class="flex items-center justify-between border border-gray-300 rounded-md overflow-hidden">
+             <input type="text" id="taskInput" placeholder="Enter a new task"
+               class="w-full rounded-sm text-sm px-2 py-1.5 focus:outline-none text-(--text)" />
+             <button id="addTask" class="cursor-pointer px-2 py-2 bg-gray-100 border-l border-gray-300 text-sm text-(--text) hover:bg-gray-300 transition-all duration-300 ease-in-out">
+               Add
+             </button>
+             <button id="saveTask" class="hidden cursor-pointer px-2 py-2 bg-gray-100 border-l border-gray-300 text-sm text-(--text) hover:bg-gray-300 transition-all duration-300 ease-in-out">
+               Save
+             </button>
+           </div>
+         </div>
+
+        <!-- list task -->
+        <div class="flex flex-col gap-1 items-center max-w-120 mx-auto p-2 mt-4" id="taskList">
+          <!-- task exanple -->
+          <div class="w-full flex items-center justify-between gap-2 py-2 border border-gray-300 rounded-md">
+            <div class="ml-2">
+              <input type="checkbox" id="selectTask" class="flex cursor-pointer w-4 h-4" />
+            </div>
+            <div>
+              <p class="text-sm text-(--text)">Task Example</p>
+            </div>
+            <div class="flex items-center gap-2 mr-2">
+              <button class="cursor-pointer text-sm text-(--text) px-2 border border-gray-300 rounded-sm bg-gray-50 hover:bg-gray-300 transition-all duration-300 ease-in-out" id="editTask">
+                Edit
+              </button>
+              <button id="deleteTask" class="cursor-pointer text-sm text-(--text) hover:text-gray-300 transition-all duration-300 ease-in-out" id="deleteTask">
+                <svg xmlns="http://www.w3.org/2000/svg" height="21" viewBox="0 -960 960 960" width="24px" fill="currentColor">
+                    <path d="M280-120q-33 0-56.5-23.5T200-200v-520q-17 0-28.5-11.5T160-760q0-17 11.5-28.5T200-800h160q0-17 11.5-28.5T400-840h160q17 0 28.5 11.5T600-800h160q17 0 28.5 11.5T800-760q0 17-11.5 28.5T760-720v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520ZM428.5-291.5Q440-303 440-320v-280q0-17-11.5-28.5T400-640q-17 0-28.5 11.5T360-600v280q0 17 11.5 28.5T400-280q17 0 28.5-11.5Zm160 0Q600-303 600-320v-280q0-17-11.5-28.5T560-640q-17 0-28.5 11.5T520-600v280q0 17 11.5 28.5T560-280q17 0 28.5-11.5ZM280-720v520-520Z"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
-    </section>
+    </main>
     <script type="module" src="src/main.js"></script>
   </body>
 </html>

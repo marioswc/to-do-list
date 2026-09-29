@@ -1,1 +1,2 @@
-import './modules/render-task.js';
+import './modules/task-render.js';
+import './modules/task-management.js';

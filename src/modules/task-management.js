@@ -7,6 +7,7 @@ const taskForm = document.getElementById('taskForm');
 const taskInput = document.getElementById('taskInput');
 const btnAddTask = document.getElementById('addTask');
 const taskListContainer = document.getElementById('taskList');
+const noTasksMessage = document.getElementById('noTasksMessage');
 
 // event listener for the task form submit
 taskForm.addEventListener('submit', (e) => {
@@ -23,6 +24,8 @@ taskForm.addEventListener('submit', (e) => {
         createTaskElement(taskObject);
         // save the task to localStorage
         saveToLocalStorage(taskObject);
+        // verify taskListArr emptiness to show/hide an message
+        checkEmptyTaskList();
         // debugging
         // console.log('adding task');
     } else {
@@ -175,6 +178,8 @@ function deleteTask(taskContainer, taskId) {
     taskContainer.remove();
     // update localStorage after deleting the task
     updateLocalStorage();
+    // verify taskListArr emptiness to show/hide an message
+    checkEmptyTaskList();
     // debugging
     // console.log('deleting task:', taskToUse, 'from: ', taskListArr, 'with ID: ', taskId);
 }
@@ -225,4 +230,12 @@ function updateLocalStorage() {
     localStorage.setItem('tasks', JSON.stringify(taskListArr));
     // debugging
     // console.log(taskListArr);
+}
+
+export function checkEmptyTaskList(){
+    if (taskListArr.length === 0) {
+        noTasksMessage.classList.remove('hidden');
+    }else{
+        noTasksMessage.classList.add('hidden');
+    }
 }

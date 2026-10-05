@@ -6,7 +6,7 @@ let isEditing = false;
 const taskForm = document.getElementById('taskForm');
 const taskInput = document.getElementById('taskInput');
 const btnAddTask = document.getElementById('addTask');
-const taskListContainer = document.getElementById('taskList');
+export const taskListContainer = document.getElementById('taskList');
 const noTasksMessage = document.getElementById('noTasksMessage');
 
 // event listener for the task form submit

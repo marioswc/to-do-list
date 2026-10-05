@@ -25,14 +25,24 @@
            <form id="taskForm" class="flex items-center justify-between border border-gray-300 rounded-md overflow-hidden">
              <input type="text" id="taskInput" placeholder="Enter a new task"
                class="w-full rounded-sm text-md px-2 py-1.5 focus:outline-none text-(--text)" />
-             <button type="submit" id="addTask" class="cursor-pointer px-2 py-2 bg-gray-100 border-l border-gray-300 text-sm text-(--text) hover:bg-gray-300 transition-all duration-300 ease-in-out">
+             <button type="submit" id="addTask" class="cursor-pointer p-2 bg-gray-100 border-l border-gray-300 text-sm text-(--text) hover:bg-gray-300 transition-all duration-300 ease-in-out">
                Add
              </button>
             </form>
          </div>
 
         <!-- list task -->
-        <div class="flex flex-col gap-1 items-center max-w-120 mx-auto p-2 mt-4" id="taskList">
+        <div class="flex flex-col gap-1 items-center max-w-120 mx-auto p-2">
+          <!-- filter tasks buttons -->
+          <div class="flex items-center justify-center gap-2 mb-4">
+            <button id="all-tasks" class="cursor-pointer px-2 py-1 rounded-sm bg-gray-100 border border-gray-300 text-sm text-(--text) hover:bg-gray-300 transition-all duration-300 ease-in-out">All</button>
+            <button id="uncompleted-tasks" class="cursor-pointer px-2 py-1 rounded-sm bg-gray-100 border border-gray-300 text-sm text-(--text) hover:bg-gray-300 transition-all duration-300 ease-in-out">Uncompleted</button>
+            <button id="completed-tasks" class="cursor-pointer px-2 py-1 rounded-sm bg-gray-100 border border-gray-300 text-sm text-(--text) hover:bg-gray-300 transition-all duration-300 ease-in-out">Completed</button>
+          </div>
+          <div id="taskList" class="w-full flex flex-col items-center gap-1">
+            <!-- tasks will be rendered here -->
+          </div>
+           <!--  -->
           <!-- task empty -->
           <p id="noTasksMessage" class="hidden text-sm text-center text-gray-400 font-medium">No tasks yet. Add a task to get started!</p>
         </div>

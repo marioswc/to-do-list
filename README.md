@@ -1,6 +1,6 @@
-# To-Do List to Practice JavaScript
+# TaskFlow — Vanilla JavaScript Task Manager
 
-A simple application built to practice and learn core JavaScript concepts.
+> A modern, lightning-fast task management web application built with vanilla JavaScript, modular architecture, and Tailwind CSS. Designed with a clean interface and zero external framework dependencies.
 
 ## Preview
 
@@ -8,9 +8,40 @@ A simple application built to practice and learn core JavaScript concepts.
   <img src="docs/img/preview-to-do-list.gif" alt="To-Do List Preview" width="300">
 </p>
 
+## Getting Started
+
+Follow these steps to run the project locally.
+
+```bash
+git clone https://github.com/mario-mendozac/to-do-list.git
+```
+
+```bash
+cd to-do-list
+```
+
+```bash
+npm install
+```
+
+```bash
+npm run dev
+```
+
+The application will be available at the local URL provided by Vite in your terminal.
+
+
+## Features 
+
+- Full Task Lifecycle: Create, edit, complete, and delete tasks seamlessly.
+- Smart Filtering: Filter tasks instantly between All, Active, and Completed views using native array methods.
+- Persistent Storage: Data is securely saved and synchronized with the browser's localStorage.
+- Dynamic Empty States: Clear UI feedback when lists are empty or filters return no results.
+- Responsive Dark UI: Minimalist, high-contrast monochrome design styled with Tailwind CSS v4.
+
 ## Try it
 
-[Try the project here](https://to-do-list-ten-bay-47.vercel.app/)
+[Live Demo](https://to-do-list-ten-bay-47.vercel.app/)
 
 ## Concepts Practiced
 
@@ -25,9 +56,9 @@ A simple application built to practice and learn core JavaScript concepts.
   - Using `filter()` to manage task visibility.
 - **Modular Code**: Organizing the project into clean ES modules using `import` and `export`.
 
-## Tech Used
+## Core Tech
 
-- Vanilla JavaScript
-- Vite
-- Tailwind CSS (v4)
-- HTML5
+- Core: Vanilla JavaScript (ES6+ / ES Modules)
+- Styling: Tailwind CSS (v4)
+- Build Tool: Vite (for fast Hot Module Replacement builds)
+- Deployment: Vercel
